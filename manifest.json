@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "TidyTube",
+    "version": "0.1",
+    "description": "Cleans up YT and gives you channel info.",
+    "icons": {
+        "64": "icons/tidytube-64.png",
+        "128": "icons/tidytube-128.png"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "tidytube.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "tidytube-background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icons/tidytube-128.png",
+        "default_title": "TidyTube",
+        "default_popup": "popup/tidytube.html"
+    }
+}
