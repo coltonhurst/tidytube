@@ -20,7 +20,6 @@ function main() {
         }
 
         try {
-            console.log("in the try");
             const sidebar = document.getElementById("secondary");
 
             if (sidebar != undefined && sidebar != null) {
